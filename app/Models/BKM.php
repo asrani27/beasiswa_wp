@@ -10,4 +10,8 @@ class BKM extends Model
     use HasFactory;
     protected $table = 'nilai_bkm';
     protected $guarded = ['id'];
+    public function siswa()
+    {
+        return $this->belongsTo(Siswa::class, 'siswa_id');
+    }
 }

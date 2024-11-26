@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BKMController;
+use App\Http\Controllers\BKMPController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -34,4 +36,18 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function () {
     Route::get('data/kriteria/delete/{id}', [KriteriaController::class, 'delete']);
     Route::get('data/kriteria/edit/{id}', [KriteriaController::class, 'edit']);
     Route::post('data/kriteria/edit/{id}', [KriteriaController::class, 'update']);
+
+    Route::get('data/bkm', [BKMController::class, 'index']);
+    Route::get('data/bkm/create', [BKMController::class, 'create']);
+    Route::post('data/bkm', [BKMController::class, 'store']);
+
+    Route::get('data/wp/bkm', [BKMController::class, 'wp']);
+    Route::get('data/wp/bkmp', [BKMPController::class, 'wp']);
+
+    Route::get('data/hasilbkm', [BKMController::class, 'hasil']);
+    Route::get('data/hasilbkmp', [BKMPController::class, 'hasil']);
+
+    Route::get('data/bkmp', [BKMPController::class, 'index']);
+    Route::get('data/bkmp/create', [BKMPController::class, 'create']);
+    Route::post('data/bkmp', [BKMPController::class, 'store']);
 });

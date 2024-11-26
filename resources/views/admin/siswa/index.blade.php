@@ -25,6 +25,8 @@
                 <th>Alamat</th>
                 <th>Telp</th>
                 <th>Jenis</th>
+                <th>Nomor BKM/BKMP</th>
+                <th>Tanggal  BKM/BKMP</th>
                 
                 <th>Aksi</th>
               </tr>
@@ -37,6 +39,8 @@
                 <td>{{$item->alamat}}</td>
                 <td>{{$item->telp}}</td>
                 <td>{{$item->jenis}}</td>
+                <td>{{$item->nomor}}</td>
+                <td>{{$item->tanggal}}</td>
                 <td>
                   <a href="/data/siswa/edit/{{$item->id}}" class="btn btn-flat btn-sm btn-primary"><i class="fa fa-edit"></i> Edit</a>
                   <a href="/data/siswa/delete/{{$item->id}}" class="btn btn-flat btn-sm btn-primary" onclick="return confirm('Yakin ingin dihapus?');"><i class="fa fa-trash"></i> Delete</a>

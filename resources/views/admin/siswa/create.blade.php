@@ -63,6 +63,19 @@
                         </div>
                     </div>
                     
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Nomor BKM/BKMP</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="nomor" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Tanggal BKM/BKMP</label>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" name="tanggal" value="{{\Carbon\Carbon::now()->format('Y-m-d')}}" required>
+                        </div>
+                    </div>
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer">
