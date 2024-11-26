@@ -8,10 +8,10 @@
     <div class="col-md-12">
         <div class="box box-primary">
           <div class="box-header">
-            <i class="ion ion-clipboard"></i><h3 class="box-title">Data Penerima Beasiswa</h3>
+            <i class="ion ion-clipboard"></i><h3 class="box-title">Data Kriteria</h3>
 
             <div class="box-tools">
-              <a href="/data/siswa/create" class="btn btn-flat btn-sm btn-primary"><i class="fa fa-plus"></i> Tambah Data</a>
+              <a href="/data/kriteria/create" class="btn btn-flat btn-sm btn-primary"><i class="fa fa-plus"></i> Tambah Data</a>
             </div>
           </div>
           <!-- /.box-header -->
@@ -19,11 +19,10 @@
             <table class="table table-hover">
               <tbody><tr>
                 <th>No</th>
-                <th>NIS</th>
-                <th>Nama siswa</th>
-                <th>Tgl Lahir</th>
-                <th>Alamat</th>
-                <th>Telp</th>
+                <th>Nama kriteria</th>
+                <th>Bobot</th>
+                <th>Tipe</th>
+                <th>keterangan</th>
                 <th>Jenis</th>
                 
                 <th>Aksi</th>
@@ -31,15 +30,14 @@
               @foreach ($data as $key => $item)
               <tr>
                 <td>{{$data->firstItem() + $key}}</td>
-                <td>{{$item->nis}}</td>
                 <td>{{$item->nama}}</td>
-                <td>{{$item->tanggal_lahir}}</td>
-                <td>{{$item->alamat}}</td>
-                <td>{{$item->telp}}</td>
+                <td>{{$item->bobot}}</td>
+                <td>{{$item->tipe}}</td>
+                <td>{{$item->keterangan}}</td>
                 <td>{{$item->jenis}}</td>
                 <td>
-                  <a href="/data/siswa/edit/{{$item->id}}" class="btn btn-flat btn-sm btn-primary"><i class="fa fa-edit"></i> Edit</a>
-                  <a href="/data/siswa/delete/{{$item->id}}" class="btn btn-flat btn-sm btn-primary" onclick="return confirm('Yakin ingin dihapus?');"><i class="fa fa-trash"></i> Delete</a>
+                  <a href="/data/kriteria/edit/{{$item->id}}" class="btn btn-flat btn-sm btn-primary"><i class="fa fa-edit"></i> Edit</a>
+                  <a href="/data/kriteria/delete/{{$item->id}}" class="btn btn-flat btn-sm btn-primary" onclick="return confirm('Yakin ingin dihapus?');"><i class="fa fa-trash"></i> Delete</a>
                 </td>
               </tr>
               @endforeach

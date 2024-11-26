@@ -6,7 +6,7 @@
 
 <div class="row">
     <div class="col-md-12">
-        <a href="/data/siswa" class="btn btn-flat btn-primary"><i class="fa fa-backward"></i> Kembali</a> <br /><br />
+        <a href="/data/kriteria" class="btn btn-flat btn-primary"><i class="fa fa-backward"></i> Kembali</a> <br /><br />
     </div>
 </div>
 
@@ -18,40 +18,34 @@
                 <h3 class="box-title">Edit Data</h3>
             </div>
             <!-- /.box-header -->
-            <form class="form-horizontal" method="post" action="/data/siswa/edit/{{$data->id}}">
+            <form class="form-horizontal" method="post" action="/data/kriteria/edit/{{$data->id}}">
                 @csrf
                 <div class="box-body">
-                    
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">NIS</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="nis" value="{{$data->nis}}" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Nama</label>
+                        <label class="col-sm-2 control-label">Nama Kriteria</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" name="nama" value="{{$data->nama}}" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">Alamat</label>
+                        <label class="col-sm-2 control-label">bobot</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="alamat" value="{{$data->alamat}}" required>
+                            <input type="text" class="form-control" name="bobot" value="{{$data->bobot}}" required>
                         </div>
                     </div>
+                    
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">Tanggal Lahir</label>
+                        <label class="col-sm-2 control-label">Tipe</label>
                         <div class="col-sm-10">
-                            <input type="date" class="form-control" name="tanggal_lahir" value="{{$data->tanggal_lahir}}" required>
+                            <select class="form-control select2" name="tipe" required>
+                                <option value="">-pilih-</option>
+                                <option value="BENEFIT" {{$data->tipe == 'BENEFIT' ? 'selected':''}}>BENEFIT</option>
+                                <option value="COST" {{$data->tipe == 'COST' ? 'selected':''}}>COST</option>
+                                
+                            </select>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Telp</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="telp" value="{{$data->telp}}" required>
-                        </div>
-                    </div>
+                    
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Jenis</label>
                         <div class="col-sm-10">
@@ -61,6 +55,12 @@
                                 <option value="BKMP" {{$data->jenis == 'BKMP' ? 'selected':''}}>BKMP</option>
                                 
                             </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">keterangan</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="keterangan" value="{{$data->keterangan}}" required>
                         </div>
                     </div>
                 </div>

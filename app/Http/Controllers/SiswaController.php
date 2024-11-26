@@ -22,7 +22,6 @@ class SiswaController extends Controller
     public function delete($id)
     {
         $data = Siswa::find($id)->delete();
-
         return back();
     }
 
@@ -31,6 +30,13 @@ class SiswaController extends Controller
         $data = Siswa::find($id);
 
         return view('admin.siswa.edit', compact('data'));
+    }
+
+    public function update(Request $req, $id)
+    {
+        Siswa::find($id)->update($req->all());
+        Session::flash('success', 'Berhasil Di Simpan');
+        return redirect('/data/siswa');
     }
 
     public function store(Request $req)
