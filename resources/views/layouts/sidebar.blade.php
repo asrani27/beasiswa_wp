@@ -14,6 +14,8 @@
         <li class="{{ (request()->is('data/wp/bkmp')) ? 'active' : '' }}"><a href="/data/wp/bkmp"><i class="fa fa-list"></i> <span>Proses WP BKMP</span></a></li>
         <li class="{{ (request()->is('data/hasilbkm')) ? 'active' : '' }}"><a href="/data/hasilbkm"><i class="fa fa-list"></i> <span>Hasil BKM</span></a></li>
         <li class="{{ (request()->is('data/hasilbkmp')) ? 'active' : '' }}"><a href="/data/hasilbkmp"><i class="fa fa-list"></i> <span>Hasil BKMP</span></a></li>
+        <li class="{{ (request()->is('data/penyerahanbkm')) ? 'active' : '' }}"><a href="/data/penyerahanbkm"><i class="fa fa-list"></i> <span>Penyerahan BKM</span></a></li>
+        <li class="{{ (request()->is('data/penyerahanbkmp')) ? 'active' : '' }}"><a href="/data/penyerahanbkmp"><i class="fa fa-list"></i> <span>Penyerahan BKMP</span></a></li>
         
         <li><a href="/logout"><i class="fa fa-sign-out"></i> <span>Logout</span></a></li>
         
