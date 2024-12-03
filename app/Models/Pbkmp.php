@@ -10,4 +10,8 @@ class Pbkmp extends Model
     use HasFactory;
     protected $table = 'pbkmp';
     protected $guarded = ['id'];
+    public function siswa()
+    {
+        return $this->belongsTo(Siswa::class, 'siswa_id');
+    }
 }

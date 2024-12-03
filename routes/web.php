@@ -10,6 +10,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PbkmpController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\KriteriaController;
 
 Route::get('/', function () {
@@ -68,4 +69,7 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function () {
     Route::get('data/pbkmp/delete/{id}', [PbkmpController::class, 'delete']);
     Route::get('data/pbkmp/edit/{id}', [PbkmpController::class, 'edit']);
     Route::post('data/pbkmp/edit/{id}', [PbkmpController::class, 'update']);
+
+
+    Route::get('data/laporan', [LaporanController::class, 'index']);
 });

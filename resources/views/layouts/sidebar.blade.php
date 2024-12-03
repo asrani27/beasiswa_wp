@@ -16,6 +16,7 @@
         <li class="{{ (request()->is('data/hasilbkmp')) ? 'active' : '' }}"><a href="/data/hasilbkmp"><i class="fa fa-list"></i> <span>Hasil BKMP</span></a></li>
         <li class="{{ (request()->is('data/pbkm')) ? 'active' : '' }}"><a href="/data/pbkm"><i class="fa fa-list"></i> <span>Penyerahan BKM</span></a></li>
         <li class="{{ (request()->is('data/pbkmp')) ? 'active' : '' }}"><a href="/data/pbkmp"><i class="fa fa-list"></i> <span>Penyerahan BKMP</span></a></li>
+        <li class="{{ (request()->is('data/laporan')) ? 'active' : '' }}"><a href="/data/laporan"><i class="fa fa-list"></i> <span>Laporan</span></a></li>
         
         <li><a href="/logout"><i class="fa fa-sign-out"></i> <span>Logout</span></a></li>
         
