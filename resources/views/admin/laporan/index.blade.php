@@ -16,10 +16,10 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body table-responsive">
-            <a href="#" class="btn btn-primary">Hasil BKM</a>
-            <a href="#" class="btn btn-primary">Hasil BKMP</a>
-            <a href="#" class="btn btn-primary">Penyerahan BKMP</a>
-            <a href="#" class="btn btn-primary">Penyerahan BKMP</a>
+            <a href="/hasilbkm" class="btn btn-primary" target="_blank">Hasil BKM</a>
+            <a href="/hasilbkmp" class="btn btn-primary" target="_blank">Hasil BKMP</a>
+            <a href="/penyerahanbkm" class="btn btn-primary" target="_blank">Penyerahan BKMP</a>
+            <a href="/penyerahanbkmp" class="btn btn-primary" target="_blank">Penyerahan BKMP</a>
           </div>
           <!-- /.box-body -->
         </div>

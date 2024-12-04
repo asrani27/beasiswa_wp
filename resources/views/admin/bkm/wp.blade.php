@@ -17,7 +17,8 @@
           <!-- /.box-header -->
           <div class="box-body table-responsive no-padding">
             <table class="table table-hover">
-              <tbody><tr>
+              <tbody>
+              <tr>
                 <th>No</th>
                 <th>Nama</th>
                 @foreach (kbkm() as $key => $item)
