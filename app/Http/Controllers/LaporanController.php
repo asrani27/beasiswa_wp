@@ -22,6 +22,12 @@ class LaporanController extends Controller
         $pdf = Pdf::loadView('admin.laporan.pdf_penyerahanbkm', compact('data'))->setPaper('a4', 'landscape');;
         return $pdf->stream();
     }
+    public function penyerahanbkmp()
+    {
+        $data = Pbkm::get();
+        $pdf = Pdf::loadView('admin.laporan.pdf_penyerahanbkmp', compact('data'))->setPaper('a4', 'landscape');;
+        return $pdf->stream();
+    }
     public function hasilbkm()
     {
         try {
