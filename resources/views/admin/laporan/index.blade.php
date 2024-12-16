@@ -18,7 +18,7 @@
           <div class="box-body table-responsive">
             <a href="/hasilbkm" class="btn btn-primary" target="_blank">Hasil BKM</a>
             <a href="/hasilbkmp" class="btn btn-primary" target="_blank">Hasil BKMP</a>
-            <a href="/penyerahanbkm" class="btn btn-primary" target="_blank">Penyerahan BKMP</a>
+            <a href="/penyerahanbkm" class="btn btn-primary" target="_blank">Penyerahan BKM</a>
             <a href="/penyerahanbkmp" class="btn btn-primary" target="_blank">Penyerahan BKMP</a>
           </div>
           <!-- /.box-body -->
