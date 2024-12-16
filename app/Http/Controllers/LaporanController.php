@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\BKM;
 use App\Models\Pbkm;
+use App\Models\Pbkmp;
 use App\Models\Siswa;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
@@ -24,7 +25,7 @@ class LaporanController extends Controller
     }
     public function penyerahanbkmp()
     {
-        $data = Pbkm::get();
+        $data = Pbkmp::get();
         $pdf = Pdf::loadView('admin.laporan.pdf_penyerahanbkmp', compact('data'))->setPaper('a4', 'landscape');;
         return $pdf->stream();
     }

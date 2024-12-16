@@ -34,7 +34,7 @@
         <tr>
             <th>No</th>
             <th>Nama</th>
-            @foreach (kbkm() as $key => $item)
+            @foreach (kbkmp() as $key => $item)
             <th>{{$item->nama}} (K{{$key+1}})</th>
             @endforeach
             
@@ -50,9 +50,9 @@
           <td>{{$item->nama}}</td>
           
           
-          @foreach (kbkm() as $item_k)
+          @foreach (kbkmp() as $item_k)
           <td>
-            {{number_format(nilaibkm($item->id, $item_k->id))}}
+            {{number_format(nilaibkmp($item->id, $item_k->id))}}
           </td>
           @endforeach
           <td>
