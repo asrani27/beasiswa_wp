@@ -72,6 +72,7 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function () {
 
 
     Route::get('data/laporan', [LaporanController::class, 'index']);
+    Route::get('data/laporan/print', [LaporanController::class, 'print']);
     Route::get('hasilbkm', [LaporanController::class, 'hasilbkm']);
     Route::get('hasilbkmp', [LaporanController::class, 'hasilbkmp']);
     Route::get('penyerahanbkm', [LaporanController::class, 'penyerahanbkm']);
